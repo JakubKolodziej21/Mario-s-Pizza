@@ -1,0 +1,244 @@
+/* Basic Css */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+    background-image: url(images/BackgroundImage.png);
+    
+}
+
+
+/* Header CSS */
+
+header a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #049cd8;
+  }
+  
+.logo{
+    
+    width: 8%;
+    height: auto;
+    opacity:0.95;
+    transition: opacity 230ms ease-in-out;
+    animation: LogoRotation 4s ease-in-out infinite;
+}
+@keyframes LogoRotation {
+    0% {
+      /* Logo obrócone w lewo */
+      transform: rotate(-20deg);
+    }
+    50% {
+      /* Logo obrócone w prawo */
+      transform: rotate(10deg);
+    }
+    100% {
+      /* Logo znowu obrócone w lewo */
+      transform: rotate(-20deg);
+    }
+  }
+
+.logo:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Nav CSS */
+
+.navbar{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    background-color: #000 ;
+    color:white;
+    font-family: 'Press Start 2P', cursive;
+   
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Article CSS */
+
+article{
+   
+    background-color: hsla(0, 0%, 100%, 0.925);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: lato;
+    
+    
+}
+
+/* Recipe CSS */
+.recipe{
+    
+    min-height: 450px;
+    padding: 2%;
+    margin: 10px;
+    
+    
+   
+    
+   
+
+}
+
+
+.recipe img{
+ padding-right: 2%;  
+ width: 40%;
+ height: auto; 
+
+}
+
+
+/* Recipe Description */
+
+/* Recipe Container */
+.container{
+    display: flex;
+    justify-content:space-around ;
+    align-items: flex-start;
+   
+}
+
+
+/* Footer CSS */
+
+footer{
+    background-color: #43b047;
+    color: white;
+    font-size: medium;
+    display: flex;
+    justify-content:space-evenly;
+    text-align: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 1%;
+}
+
+footer img{
+    width: 18%;
+    height: auto;
+}
+
+.flexibility{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Mobile Device View */
+
+@media (max-width: 800px) {
+    
+    .logo{
+    
+        width: 15%;
+        height: auto;
+    }
+    
+   
+   
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .flexibility{
+        width: 100%;
+        margin: 0;               
+    }
+
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .container img{
+       width: 100%;
+       height: auto;
+       float:left
+    }
+
+    
+
+    footer img{
+    display: none;
+
+}
+
+}
