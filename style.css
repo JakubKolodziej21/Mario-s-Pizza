@@ -141,6 +141,9 @@ article{
 
 
 /* Recipe Description */
+.description{
+    min-width: 62%;
+}
 
 /* Recipe Container */
 .container{
