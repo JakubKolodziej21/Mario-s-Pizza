@@ -1,46 +1,49 @@
 /* Basic Css */
-*{
+* {
     box-sizing: border-box;
 }
-body{
-    margin:0;
+
+body {
+    margin: 0;
     padding: 0;
     background-image: url(images/BackgroundImage.png);
-    
+
 }
 
 
 /* Header CSS */
-
-header a{
+header a {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #049cd8;
-  }
-  
-.logo{
-    
+}
+
+.logo {
+
     width: 8%;
     height: auto;
-    opacity:0.95;
+    opacity: 0.95;
     transition: opacity 230ms ease-in-out;
     animation: LogoRotation 4s ease-in-out infinite;
 }
+
 @keyframes LogoRotation {
     0% {
-      /* Logo obrócone w lewo */
-      transform: rotate(-20deg);
+        /* Logo obrócone w lewo */
+        transform: rotate(-20deg);
     }
+
     50% {
-      /* Logo obrócone w prawo */
-      transform: rotate(10deg);
+        /* Logo obrócone w prawo */
+        transform: rotate(10deg);
     }
+
     100% {
-      /* Logo znowu obrócone w lewo */
-      transform: rotate(-20deg);
+        /* Logo znowu obrócone w lewo */
+        transform: rotate(-20deg);
     }
-  }
+}
 
 .logo:hover {
     opacity: 1;
@@ -49,14 +52,14 @@ header a{
 
 /* Nav CSS */
 
-.navbar{
+.navbar {
     display: flex;
-    justify-content:space-around ;
+    justify-content: space-around;
     align-items: center;
-    background-color: #000 ;
-    color:white;
+    background-color: #000;
+    color: white;
     font-family: 'Press Start 2P', cursive;
-   
+
 }
 
 .navbar-links {
@@ -104,83 +107,71 @@ header a{
 
 /* Article CSS */
 
-article{
-   
+article {
+
     background-color: hsla(0, 0%, 100%, 0.925);
     display: flex;
     justify-content: center;
     align-items: center;
-    
     font-family: lato;
-    
-    
 }
 
 /* Recipe CSS */
-.recipe{
-    
+.recipe {
     min-height: 450px;
     width: auto;
     padding: 2%;
     margin: 10px;
-    
-    
-   
-    
-   
-
 }
 
 
-.recipe img{
- padding-right: 2%;  
- width: 40%;
- height: auto; 
+.recipe img {
+    padding-right: 2%;
+    width: 40%;
+    height: auto;
 
 }
 
 
 /* Recipe Description */
-.description{
+.description {
     min-width: 62%;
 }
 
 /* Recipe Container */
-.container{
+.container {
     display: flex;
-    justify-content:space-around ;
+    justify-content: space-around;
     align-items: flex-start;
-   
+
 }
 
 /* Contact CSS */
-.PhotoProfile{
+.PhotoProfile {
     border-radius: 50%;
 }
 
 
-
-
 /* Footer CSS */
 
-footer{
+footer {
     background-color: #43b047;
     color: white;
     font-size: medium;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
     font-family: 'Press Start 2P', cursive;
     margin-top: 1%;
 }
 
-footer img{
+footer img {
     width: 18%;
     height: auto;
 }
 
-.flexibility{
+.flexibility {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -189,67 +180,72 @@ footer img{
 /* Mobile Device View */
 
 @media (max-width: 800px) {
-    
-    .logo{
-    
+
+    .logo {
+
         width: 15%;
         height: auto;
     }
-    
-   
-   
+
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
 
+
     .toggle-button {
         display: flex;
     }
+
 
     .navbar-links {
         display: none;
         width: 100%;
     }
 
+
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
     }
 
+
     .navbar-links ul li {
         text-align: center;
     }
+
 
     .navbar-links ul li a {
         padding: .5rem 1rem;
     }
 
+
     .navbar-links.active {
         display: flex;
     }
 
-    .flexibility{
+
+    .flexibility {
         width: 100%;
-        margin: 0;               
+        margin: 0;
     }
 
 
-    .container{
+    .container {
         flex-wrap: wrap;
     }
 
-    .container img{
-       width: 100%;
-       height: auto;
-       float:left
+
+    .container img {
+        width: 100%;
+        height: auto;
+        float: left
     }
 
-    
 
-    footer img{
-    display: none;
+    footer img {
+        display: none;
 
-}
-
+    }
 }
